@@ -1,5 +1,14 @@
+
+import { useState } from 'react';
 import ReactLogo from './assets/logo-react.png'
 import './styles.css'
+
+
+
+export default function App(){
+  const [activeContentIndex, setActiveContentIndex] = useState(0);
+}
+
 
 const content = [
   [
@@ -46,7 +55,7 @@ function App() {
 
         <div id="tab-content">
           <ul>
-                    {content[0].map((item) => (
+                    {content[activeContentIndex].map((item) => (
             <li key={item}>{item}</li>
           ))}
             
@@ -57,4 +66,4 @@ function App() {
   )
 }
 
-export default App
+
