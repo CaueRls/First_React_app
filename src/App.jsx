@@ -5,9 +5,7 @@ import './styles.css'
 
 
 
-export default function App(){
-  const [activeContentIndex, setActiveContentIndex] = useState(0);
-}
+
 
 
 const content = [
@@ -36,7 +34,9 @@ const content = [
   ]
 ];
 
-function App() {
+export default function App() {
+
+  const [activeContentIndex, setActiveContentIndex] = useState(0);
   return(
     <div>
     <header>
@@ -48,9 +48,9 @@ function App() {
     </header>
     <div id="tabs">
         <menu>
-          <button>Why React?</button>
-          <button>Core Features</button>
-          <button>Related Resources</button>
+          <button onClick={() => setActiveContentIndex(0)}>Why React?</button>
+          <button onClick={() => setActiveContentIndex(1)}>Core Features</button>
+          <button onClick={() => setActiveContentIndex(2)}>Related Resources</button>
         </menu>
 
         <div id="tab-content">
